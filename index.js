@@ -112,6 +112,10 @@ function handlePlayRound(event) {
 
   if (rounds === 5) {
     checkWinner();
+
+    choiceButtons.classList.add('hide');
+    roundResultDiv.classList.add('hide');
+    finalResultDiv.classList.remove('hide');
   }
 }
 
