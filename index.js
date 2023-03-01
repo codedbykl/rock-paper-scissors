@@ -86,3 +86,11 @@ function checkScore() {
 
   console.log(finalScore);
 }
+
+function updateScore(winner) {
+  if (winner === 'player') {
+    score.player++;
+  } else if (winner === 'computer') {
+    score.computer++;
+  }
+}
