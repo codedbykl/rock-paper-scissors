@@ -7,6 +7,7 @@ const score = {
   player: 0,
   computer: 0,
 };
+let rounds = 0;
 
 function capitalize(string) {
   const firstLetterInUpperCase = string[0].toUpperCase();
@@ -94,15 +95,23 @@ function updateScore(winner) {
 }
 
 function handlePlayRound(event) {
-  const computerSelection = getComputerChoice();
-  const playerSelection = event.target.dataset.choice;
+  if (rounds < 5) {
+    const computerSelection = getComputerChoice();
+    const playerSelection = event.target.dataset.choice;
 
-  playRound(playerSelection, computerSelection);
+    playRound(playerSelection, computerSelection);
 
-  const result = checkRoundResult(playerSelection, computerSelection);
+    const result = checkRoundResult(playerSelection, computerSelection);
 
-  updateScore(result);
-  checkScore();
+    updateScore(result);
+    checkScore();
+
+    rounds++;
+  }
+
+  if (rounds === 5) {
+    checkWinner();
+  }
 }
 
 function game() {
