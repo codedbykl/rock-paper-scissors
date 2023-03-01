@@ -100,11 +100,13 @@ function handlePlayRound(event) {
   if (rounds === 5) {
     checkWinner();
 
-    title.textContent = 'The game is over!';
-    choiceButtons.classList.add('hide');
-    roundResultDiv.classList.add('hide');
-    finalResultDiv.classList.remove('hide');
-    restartButton.classList.remove('hide');
+    setTimeout(() => {
+      title.textContent = 'The game is over!';
+      choiceButtons.classList.add('hide');
+      roundResultDiv.classList.add('hide');
+      finalResultDiv.classList.remove('hide');
+      restartButton.classList.remove('hide');
+    }, 2000);
   }
 }
 
