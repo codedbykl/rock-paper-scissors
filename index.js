@@ -4,6 +4,14 @@ const score = {
   computer: 0,
 };
 
+function capitalize(string) {
+  const firstLetterInUpperCase = string[0].toUpperCase();
+  const stringWithoutFirstLetter = string.slice(1, string.length);
+  const capitalizedString = firstLetterInUpperCase + stringWithoutFirstLetter;
+
+  return capitalizedString;
+}
+
 function getComputerChoice() {
   const randomNumberBetween0And2 = Math.floor(
     Math.random() * possibleChoices.length
