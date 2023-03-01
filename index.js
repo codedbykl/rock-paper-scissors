@@ -1,4 +1,5 @@
 const choiceButtons = document.querySelector('.choices');
+const roundResultDiv = document.querySelector('.round-result');
 
 const possibleChoices = ['rock', 'paper', 'scissors'];
 const score = {
@@ -61,15 +62,11 @@ function playRound(playerSelection, computerSelection) {
   computerSelection = capitalize(computerSelection);
 
   if (result === 'tie') {
-    console.log("It's a tie!");
+    roundResultDiv.textContent = "It's a tie!";
   } else if (result === 'player') {
-    console.log(
-      `You win the round! ${playerSelection} beats ${computerSelection}.`
-    );
+    roundResultDiv.textContent = `You win the round! ${playerSelection} beats ${computerSelection}.`;
   } else {
-    console.log(
-      `You lose the round! ${computerSelection} beats ${playerSelection}.`
-    );
+    roundResultDiv.textContent = `You lose the round! ${computerSelection} beats ${playerSelection}.`;
   }
 }
 
