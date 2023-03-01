@@ -80,3 +80,9 @@ function checkWinner() {
     console.log(`Computer is the winner!`);
   }
 }
+
+function checkScore() {
+  const finalScore = `${score.player} : ${score.computer}`;
+
+  console.log(finalScore);
+}
