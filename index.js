@@ -51,3 +51,22 @@ function checkRoundResult(playerSelection, computerSelection) {
     return 'computer';
   }
 }
+
+function playRound(playerSelection, computerSelection) {
+  const result = checkRoundResult(playerSelection, computerSelection);
+
+  playerSelection = capitalize(playerSelection);
+  computerSelection = capitalize(computerSelection);
+
+  if (result === 'tie') {
+    console.log("It's a tie!");
+  } else if (result === 'player') {
+    console.log(
+      `You win the round! ${playerSelection} beats ${computerSelection}.`
+    );
+  } else {
+    console.log(
+      `You lose the round! ${computerSelection} beats ${playerSelection}.`
+    );
+  }
+}
