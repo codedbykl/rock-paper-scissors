@@ -70,3 +70,13 @@ function playRound(playerSelection, computerSelection) {
     );
   }
 }
+
+function checkWinner() {
+  if (score.player === score.computer) {
+    console.log(`We have a tie!`);
+  } else if (score.player > score.computer) {
+    console.log(`You are the winner!`);
+  } else {
+    console.log(`Computer is the winner!`);
+  }
+}
