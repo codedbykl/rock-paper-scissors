@@ -1,4 +1,5 @@
 const choiceButtons = document.querySelector('.choices');
+const restartButton = document.querySelector('.button-restart');
 const roundResultDiv = document.querySelector('.round-result');
 const finalResultDiv = document.querySelector('.final-result');
 const scoreDiv = document.querySelector('.score');
@@ -118,6 +119,7 @@ function handlePlayRound(event) {
     choiceButtons.classList.add('hide');
     roundResultDiv.classList.add('hide');
     finalResultDiv.classList.remove('hide');
+    restartButton.classList.remove('hide');
   }
 }
 
