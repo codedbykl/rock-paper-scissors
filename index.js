@@ -94,3 +94,21 @@ function updateScore(winner) {
     score.computer++;
   }
 }
+
+function game() {
+  for (let round = 0; round < 5; round++) {
+    const computerSelection = getComputerChoice();
+    const playerSelection = getPlayerChoice();
+
+    playRound(playerSelection, computerSelection);
+
+    const result = checkRoundResult(playerSelection, computerSelection);
+
+    updateScore(result);
+  }
+
+  checkScore();
+  checkWinner();
+}
+
+game();
