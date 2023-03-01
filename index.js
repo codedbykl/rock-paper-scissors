@@ -27,3 +27,19 @@ function getPlayerChoice() {
     return playerChoice;
   }
 }
+
+function checkRoundResult(playerSelection, computerSelection) {
+  if (playerSelection === computerSelection) {
+    return 'tie';
+  }
+
+  if (
+    (playerSelection === 'rock' && computerSelection === 'scissors') ||
+    (playerSelection === 'paper' && computerSelection === 'rock') ||
+    (playerSelection === 'scissors' && computerSelection === 'paper')
+  ) {
+    return 'player';
+  } else {
+    return 'computer';
+  }
+}
