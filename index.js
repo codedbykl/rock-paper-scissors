@@ -12,3 +12,18 @@ function getComputerChoice() {
 
   return computerChoice;
 }
+
+function getPlayerChoice() {
+  let validated = false;
+
+  while (!validated) {
+    const playerChoice = prompt('Rock, Paper, Scissors?')?.toLowerCase();
+
+    if (!playerChoice || !possibleChoices.includes(playerChoice)) {
+      continue;
+    }
+
+    validated = true;
+    return playerChoice;
+  }
+}
