@@ -1,5 +1,6 @@
 const choiceButtons = document.querySelector('.choices');
 const roundResultDiv = document.querySelector('.round-result');
+const finalResultDiv = document.querySelector('.final-result');
 const scoreDiv = document.querySelector('.score');
 
 const possibleChoices = ['rock', 'paper', 'scissors'];
@@ -74,11 +75,11 @@ function playRound(playerSelection, computerSelection) {
 
 function checkWinner() {
   if (score.player === score.computer) {
-    console.log(`We have a tie!`);
+    finalResultDiv.textContent = `We have a tie!`;
   } else if (score.player > score.computer) {
-    console.log(`You are the winner!`);
+    finalResultDiv.textContent = `You are the winner!`;
   } else {
-    console.log(`Computer is the winner!`);
+    finalResultDiv.textContent = `Computer is the winner!`;
   }
 }
 
