@@ -2,6 +2,7 @@ const choiceButtons = document.querySelector('.choices');
 const roundResultDiv = document.querySelector('.round-result');
 const finalResultDiv = document.querySelector('.final-result');
 const scoreDiv = document.querySelector('.score');
+const title = document.querySelector('.title');
 
 const possibleChoices = ['rock', 'paper', 'scissors'];
 const score = {
@@ -113,6 +114,7 @@ function handlePlayRound(event) {
   if (rounds === 5) {
     checkWinner();
 
+    title.textContent = 'The game is over!';
     choiceButtons.classList.add('hide');
     roundResultDiv.classList.add('hide');
     finalResultDiv.classList.remove('hide');
