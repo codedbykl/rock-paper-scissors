@@ -1,5 +1,6 @@
 const choiceButtons = document.querySelector('.choices');
 const roundResultDiv = document.querySelector('.round-result');
+const scoreDiv = document.querySelector('.score');
 
 const possibleChoices = ['rock', 'paper', 'scissors'];
 const score = {
@@ -81,9 +82,7 @@ function checkWinner() {
 }
 
 function checkScore() {
-  const finalScore = `${score.player} : ${score.computer}`;
-
-  console.log(finalScore);
+  scoreDiv.textContent = `${score.player} : ${score.computer}`;
 }
 
 function updateScore(winner) {
@@ -107,6 +106,7 @@ function handlePlayRound(event) {
 }
 
 function game() {
+  checkScore();
   choiceButtons.addEventListener('click', handlePlayRound);
 }
 
