@@ -2,7 +2,7 @@
 
 This project was coded to practice the JavaScript knowledge acquired at Foundations Course (in the JavaScript Basics part) of The Odin Project.
 
-It's a Rock, Paper, Scissors game working only on console for now.
+It's a Rock, Paper, Scissors game.
 
 ## What skills was used
 
@@ -13,6 +13,7 @@ It's a Rock, Paper, Scissors game working only on console for now.
   - Conditionals
   - Operators
   - Data types
-  - ...
+  - DOM manipulation
+  - Events
 
 Coded By [@codedbykl](https://www.github.com/codedbykl)
