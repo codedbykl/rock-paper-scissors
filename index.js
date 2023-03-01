@@ -123,9 +123,26 @@ function handlePlayRound(event) {
   }
 }
 
+function handleRestartGame() {
+  title.textContent = "Let's play rock, paper, scissors?";
+  choiceButtons.classList.remove('hide');
+  roundResultDiv.classList.remove('hide');
+  finalResultDiv.classList.add('hide');
+  restartButton.classList.add('hide');
+
+  score.player = 0;
+  score.computer = 0;
+
+  rounds = 0;
+
+  roundResultDiv.textContent = '';
+  scoreDiv.textContent = '0 : 0';
+}
+
 function game() {
   checkScore();
   choiceButtons.addEventListener('click', handlePlayRound);
+  restartButton.addEventListener('click', handleRestartGame);
 }
 
 game();
