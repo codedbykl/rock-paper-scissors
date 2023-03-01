@@ -12,14 +12,6 @@ const score = {
 };
 let rounds = 0;
 
-function capitalize(string) {
-  const firstLetterInUpperCase = string[0].toUpperCase();
-  const stringWithoutFirstLetter = string.slice(1, string.length);
-  const capitalizedString = firstLetterInUpperCase + stringWithoutFirstLetter;
-
-  return capitalizedString;
-}
-
 function getComputerChoice() {
   const randomNumberBetween0And2 = Math.floor(
     Math.random() * possibleChoices.length
@@ -47,9 +39,6 @@ function checkRoundResult(playerSelection, computerSelection) {
 
 function playRound(playerSelection, computerSelection) {
   const result = checkRoundResult(playerSelection, computerSelection);
-
-  playerSelection = capitalize(playerSelection);
-  computerSelection = capitalize(computerSelection);
 
   if (result === 'tie') {
     roundResultDiv.textContent = "It's a tie!";
