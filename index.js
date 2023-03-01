@@ -1,3 +1,5 @@
+const choiceButtons = document.querySelector('.choices');
+
 const possibleChoices = ['rock', 'paper', 'scissors'];
 const score = {
   player: 0,
@@ -95,20 +97,20 @@ function updateScore(winner) {
   }
 }
 
-function game() {
-  for (let round = 0; round < 5; round++) {
-    const computerSelection = getComputerChoice();
-    const playerSelection = getPlayerChoice();
+function handlePlayRound(event) {
+  const computerSelection = getComputerChoice();
+  const playerSelection = event.target.dataset.choice;
 
-    playRound(playerSelection, computerSelection);
+  playRound(playerSelection, computerSelection);
 
-    const result = checkRoundResult(playerSelection, computerSelection);
+  const result = checkRoundResult(playerSelection, computerSelection);
 
-    updateScore(result);
-  }
-
+  updateScore(result);
   checkScore();
-  checkWinner();
+}
+
+function game() {
+  choiceButtons.addEventListener('click', handlePlayRound);
 }
 
 game();
