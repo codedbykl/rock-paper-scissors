@@ -5,7 +5,7 @@ const finalResultDiv = document.querySelector('.final-result');
 const scoreDiv = document.querySelector('.score');
 const title = document.querySelector('.title');
 
-const possibleChoices = ['rock', 'paper', 'scissors'];
+const possibleChoices = ['Rock', 'Paper', 'Scissors'];
 const score = {
   player: 0,
   computer: 0,
@@ -27,9 +27,9 @@ function checkRoundResult(playerSelection, computerSelection) {
   }
 
   if (
-    (playerSelection === 'rock' && computerSelection === 'scissors') ||
-    (playerSelection === 'paper' && computerSelection === 'rock') ||
-    (playerSelection === 'scissors' && computerSelection === 'paper')
+    (playerSelection === 'Rock' && computerSelection === 'Scissors') ||
+    (playerSelection === 'Paper' && computerSelection === 'Rock') ||
+    (playerSelection === 'Scissors' && computerSelection === 'Paper')
   ) {
     return 'player';
   } else {
